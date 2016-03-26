@@ -30,6 +30,7 @@
     "vue-component-paginator": "^0.1.0",
     "vue-component-select": "^0.1.1",
     "vue-loading": "^0.1.2",
+    "vue-plain": "^0.1.0",
     "vue-router": "^0.7.11"
   },
   "devDependencies": {

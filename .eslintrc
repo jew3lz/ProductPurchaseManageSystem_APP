@@ -24,27 +24,22 @@
         "Toastr": true
     },
     "rules": {
-        "block-scoped-var": 0,                                     //把 var 语句看作是在块级作用域范围之内
-        "curly": 1,                                                //为所有控制语句指定花括号约定，警告
-        "eol-last": 0,                                             //强制文件最后一行为空行，关闭
-        "eqeqeq": [1, "allow-null"],                               //要求使用 === 和 !==，但允许 == null
-        "dot-notation": 2,                                         //尽可能的使用点符号
-        "no-console": 0,                                           //不允许存在 console。关闭
-        "no-empty": 1,                                             //空的代码块
-        "no-multi-spaces": 1,                                      //不允许多个空格
-        "no-self-compare": 1,                                      //禁止自身比较
-        "no-shadow": 1,                                            //不允许声明在外层作用域下已声明过的变量
-        "no-undef": 2,                                             //不允许使用未申明变量
-        "no-underscore-dangle": 0,                                 //禁止标识符中有悬空下划线。关闭
-        "no-unused-expressions": [1, { allowShortCircuit: true }], // 禁止在语句的位置使用表达式，但允许a && a()
-        "no-unused-vars": 2,                                       //变量定义后未使用
-        "no-use-before-define": 1,                                 //不允许在变量定义之前使用它们
-        "quotes": [0, "single", "avoid-escape"]                    //使用单引号，除非为了避免转义
-    },
-    "extends": "eslint:recommended",
-    "ecmaFeatures": {
-        "jsx": true,
-        "experimentalObjectRestSpread": true
+        "block-scoped-var": 0,
+        "curly": 1,
+        "eol-last": 0,
+        "eqeqeq": [1, "allow-null"],
+        "dot-notation": 2,
+        "no-console": 0,
+        "no-empty": 1,
+        "no-multi-spaces": 1,
+        "no-self-compare": 1,
+        "no-shadow": 1,
+        "no-undef": 2,
+        "no-underscore-dangle": 0,
+        "no-unused-expressions": [1, { allowShortCircuit: true }],
+        "no-unused-vars": 2,
+        "no-use-before-define": 1,
+        "quotes": [0, "single", "avoid-escape"]
     },
     "plugins": [
         "vue"

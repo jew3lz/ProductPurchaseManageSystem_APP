@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Plugin from './util/plugin';
+import plain from 'vue-plain';
 import initRouter from './router';
 import App from './views/layout/App.vue';
 
@@ -15,7 +15,7 @@ window.Vue = Vue;
 
 Vue.config.debug = true;
 Vue.use(Router);
-Vue.use(Plugin);
+Vue.use(plain);
 
 let router = initRouter(Router);
 router.start(App, '#app');
