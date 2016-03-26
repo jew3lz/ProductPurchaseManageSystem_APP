@@ -14,11 +14,11 @@ export default {
                     count: 0,
                     price: 0,
                     usage: '',
-                    orderId: 1,
+                    orderId: 1
                 };
             },
             coerce (value) {
-                return JSON.parse(JSON.stringify(value));
+                return Vue.plain(value);
             }
         }
     },
@@ -51,7 +51,7 @@ export default {
 <template>
 <modal :show.sync="show" :title="edit? '编辑产品' : '创建产品'" @ok="ok">
 
-    <form class="form-horizontal" role="form" slot="body">
+    <form class="form-horizontal" role="form">
         <div class="form-body">
             <div class="form-group">
                 <label class="col-md-3 control-label">* 名称</label>

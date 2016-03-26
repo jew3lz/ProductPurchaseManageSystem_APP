@@ -7,9 +7,9 @@ export default {
     props: {
         show: Boolean,
         edit: Boolean,
-        productList: Array,
-        employeeList: Array,
-        statusMap: Object,
+        productList: null,
+        employeeList: null,
+        statusMap: null,
         order: {
             default () {
                 return {
@@ -19,7 +19,11 @@ export default {
                 };
             },
             coerce (value) {
-                let obj = JSON.parse(JSON.stringify(value));
+                if (value == null) {
+                    return value;
+                }
+
+                let obj = Vue.plain(value);
                 obj.proList = obj.proList.split(',');
 
                 return obj;
@@ -77,7 +81,7 @@ export default {
 <template>
 <modal :show.sync="show" :title="edit? '编辑订单' : '创建订单'" @ok="ok">
 
-    <form class="form-horizontal" role="form" slot="body">
+    <form class="form-horizontal" role="form">
         <div class="form-body">
             <div class="form-group">
                 <label class="col-md-3 control-label">* 员工</label>

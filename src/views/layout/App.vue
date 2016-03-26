@@ -31,10 +31,10 @@ export default {
 <style>
 @font-face {
     font-family:"Open Sans";
-    src:url("/src/assets/open-sans/OpenSans-Regular.eot?") format("eot"),
-        url("/src/assets/open-sans/OpenSans-Regular.woff") format("woff"),
-        url("/src/assets/open-sans/OpenSans-Regular.ttf") format("truetype"),
-        url("/src/assets/open-sans/OpenSans-Regular.svg#OpenSans") format("svg");
+    src:url("/static/open-sans/OpenSans-Regular.eot?") format("eot"),
+        url("/static/open-sans/OpenSans-Regular.woff") format("woff"),
+        url("/static/open-sans/OpenSans-Regular.ttf") format("truetype"),
+        url("/static/open-sans/OpenSans-Regular.svg#OpenSans") format("svg");
 }
 
 body, h1, h2, h3, h4, h5, h6 {
