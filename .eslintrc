@@ -1,0 +1,47 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "globals": {
+        "jest": false,
+        "describe": false,
+        "it": false,
+        "expect": false,
+        "_": false,
+        "$": true,
+        "__NAPI_SOURCE__": false,
+        "createUnitStore": false,
+        "StateTypes": false,
+        "require": true,
+        "define": true,
+        "module": true,
+        "console": true,
+        "window": true,
+        "Vue": true,
+        "Toastr": true
+    },
+    "rules": {
+        "block-scoped-var": 0,
+        "curly": 1,
+        "eol-last": 0,
+        "eqeqeq": [1, "allow-null"],
+        "dot-notation": 2,
+        "no-console": 0,
+        "no-empty": 1,
+        "no-multi-spaces": 1,
+        "no-self-compare": 1,
+        "no-shadow": 1,
+        "no-undef": 2,
+        "no-underscore-dangle": 0,
+        "no-unused-expressions": [1, { allowShortCircuit: true }],
+        "no-unused-vars": 2,
+        "no-use-before-define": 1,
+        "quotes": [0, "single", "avoid-escape"]
+    },
+    "plugins": [
+        "vue"
+    ]
+}

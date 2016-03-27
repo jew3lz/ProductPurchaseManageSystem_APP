@@ -16,7 +16,8 @@ module.exports = {
         alias: {
             components: path.join(__dirname, './src/components'),
             common: path.join(__dirname, './src/common'),
-            views: path.join(__dirname, './src/views')
+            views: path.join(__dirname, './src/views'),
+            static: path.join(__dirname, './static')
         }
     },
     module: {
@@ -64,7 +65,7 @@ module.exports = {
             }
         }
     },
-    devtool: 'source-map'
+    devtool: '#eval-source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {

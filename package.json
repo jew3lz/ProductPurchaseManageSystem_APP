@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --port 8888",
-    "dev": "webpack-dev-server --inline --hot",
+    "dev": "webpack-dev-server --inline --hot --port 8888",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "mock": "json-server ./mock/mock.json --port 9090"
   },
@@ -29,7 +29,8 @@
     "vue-component-date": "^0.1.0",
     "vue-component-paginator": "^0.1.0",
     "vue-component-select": "^0.1.1",
-    "vue-loading": "^0.1.0",
+    "vue-loading": "^0.1.2",
+    "vue-plain": "^0.1.0",
     "vue-router": "^0.7.11"
   },
   "devDependencies": {

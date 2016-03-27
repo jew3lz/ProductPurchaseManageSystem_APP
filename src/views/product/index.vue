@@ -58,7 +58,7 @@ export default {
             this.fetchProductList();
         },
         addProduct (product) {
-            return $.get(api.product.insert, product).then((result) => {
+            return $.get(api.product.insert, product).then(() => {
                 this.product.list.unshift(product);
                 this.product.count += 1;
                 //this.fetchOrderList();
@@ -68,7 +68,7 @@ export default {
             });
         },
         updateProduct (product) {
-            return $.get(api.product.update, product).then((result) => {
+            return $.get(api.product.update, product).then(() => {
                 this.product.current = product;
 
                 this.modal.edit = false;
@@ -80,7 +80,7 @@ export default {
                 id: this.product.current.id
             };
 
-            return $.get(api.product.remove, params).then((result) => {
+            return $.get(api.product.remove, params).then(() => {
                 let index = this.product.list.indexOf(this.product.current);
                 this.product.list.splice(index, 1);
 

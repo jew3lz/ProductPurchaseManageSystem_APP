@@ -76,7 +76,7 @@ export default {
             this.fetchOrderList();
         },
         addOrder (order) {
-            return $.get(api.order.insert, order).then((result) => {
+            return $.get(api.order.insert, order).then(() => {
                 this.order.list.unshift(order);
                 this.order.count += 1;
                 //this.fetchOrderList();
@@ -86,7 +86,7 @@ export default {
             });
         },
         updateOrder (order) {
-            return $.get(api.order.update, order).then((result) => {
+            return $.get(api.order.update, order).then(() => {
                 this.order.current = order;
 
                 this.modal.edit = false;

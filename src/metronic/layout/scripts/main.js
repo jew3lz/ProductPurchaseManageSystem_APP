@@ -1,12 +1,10 @@
 /**
  * layout 主题初始化
  */
-/*require('jquery-ui');
-require('bootstrap-hover-dropdown');
-require('jquery-uniform');
-require('bootstrap-switch');
-require('jquery-slimscroll/jquery.slimscroll');*/
 
+require('bootstrap-hover-dropdown');
+require('bootstrap-switch');
+require('jquery-slimscroll/jquery.slimscroll');
 
 var app = window.Metronic = require('../../global/scripts/app');
 var layout = require('./layout');

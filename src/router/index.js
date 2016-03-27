@@ -31,9 +31,5 @@ export default function init (Router) {
         transition.next();
     });
 
-    router.afterEach(() => {
-        $(window).resize();
-    });
-
-    return router
+    return router;
 }
