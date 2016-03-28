@@ -138,7 +138,7 @@ export default {
                 <div class="portlet-title">
                     <div class="caption">
                         <i class="icon-social-dribbble font-blue"></i>
-                        <span class="caption-subject font-blue bold">List</span>
+                        <span class="caption-subject font-blue bold">订单列表 ORDER LIST</span>
                     </div>
                     <div class="actions">
                         <button class="btn btn-outline blue" @click="openOrderAdd">创建订单</button>
@@ -169,10 +169,13 @@ export default {
                                     <td>{{item.id}}</td>
                                     <td>{{item.staffId}}</td>
                                     <td>{{item.proList}}</td>
-                                    <td>{{item.status}}</td>
+                                    <td>{{order.statusMap[item.status]}}</td>
                                     <td class="nowrap">
                                         <button class="btn btn-sm btn-outline green" @click="openOrderEdit(item)">编辑</button>
                                     </td>
+                                </tr>
+                                <tr v-if="!order.list.length" style="text-align: center">
+                                    <td colspan="5">没有查询到相关数据！</td>
                                 </tr>
                             </tbody>
                         </table>

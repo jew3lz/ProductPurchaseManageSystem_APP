@@ -115,7 +115,7 @@ export default {
                 <div class="portlet-title">
                     <div class="caption">
                         <i class="icon-social-dribbble font-blue"></i>
-                        <span class="caption-subject font-blue bold">List</span>
+                        <span class="caption-subject font-blue bold">产品列表 PRODUCT LIST</span>
                     </div>
                     <div class="actions">
                         <button class="btn btn-outline blue" @click="openProductAdd">创建产品</button>
@@ -146,6 +146,9 @@ export default {
                                         <button class="btn btn-sm btn-outline green" @click="openProductEdit(item)">编辑</button>
                                         <button class="btn btn-sm btn-outline red" @click="openProductRemove(item)">删除</button>
                                     </td>
+                                </tr>
+                                <tr v-if="!product.list.length" style="text-align: center">
+                                    <td colspan="6">没有查询到相关数据！</td>
                                 </tr>
                             </tbody>
                         </table>

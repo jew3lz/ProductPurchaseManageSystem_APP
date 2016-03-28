@@ -23,7 +23,7 @@
     "select2": "^4.0.1",
     "simple-line-icons": "^2.2.4",
     "toastr": "^2.1.2",
-    "vue": "^1.0.0",
+    "vue": "1.0.20",
     "vue-bootstrap-modal": "^0.1.0",
     "vue-bootstrap-table": "^0.1.0",
     "vue-component-date": "^0.1.0",
