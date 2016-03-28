@@ -12,7 +12,7 @@ export default {
     product: {
         list: 'proPur/product/list',
         update: 'proPur/product/update',
-        remove: 'proPur/product/remove',
+        remove: 'proPur/product/delete',
         insert: 'proPur/product/insert',
     },
     employee: {
