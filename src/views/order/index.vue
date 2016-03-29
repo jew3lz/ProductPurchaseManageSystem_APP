@@ -87,7 +87,8 @@ export default {
         },
         updateOrder (order) {
             return $.get(api.order.update, order).then(() => {
-                this.order.current = order;
+                let index = this.order.list.indexOf(this.order.current);
+                this.order.list.$set(index, order);
 
                 this.modal.edit = false;
                 Toastr.success('编辑成功', 'Success');

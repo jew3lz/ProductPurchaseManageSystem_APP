@@ -60,8 +60,8 @@ module.exports = {
         noInfo: true,
         proxy: {
             "/proPur/*": {
-                //target: "http://localhost:9090/*"
-                target: "http://localhost:8899"
+                target: "http://localhost:8899/*"
+                /*target: "http://172.17.203.67:8899"*/
             }
         }
     },
