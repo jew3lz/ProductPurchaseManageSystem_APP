@@ -1,12 +1,18 @@
 <script>
-export default {};
+export default {
+    methods: {
+        scrollTop () {
+            $('body').animate({ scrollTop: 0 }, 400);
+        }
+    }
+};
 </script>
 
 <template>
 <div class="page-footer">
-    <div class="page-footer-inner">2016 &copy; Order Manage System.</div>
+    <div class="page-footer-inner">2016 &copy; Product Purchase System.</div>
     <!--滚动顶部-->
-    <div class="scroll-to-top"><i class="icon-arrow-up"></i></div>
+    <div class="scroll-to-top" @click="scrollTop"><i class="icon-arrow-up"></i></div>
 </div>
 </template>
 
