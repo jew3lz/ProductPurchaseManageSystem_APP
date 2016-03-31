@@ -18,6 +18,9 @@ export default {
     directives: { loading },
     name: 'Order',
     data () {
+        let date = new Date();
+        date = new Date(date.getFullYear() + '-' + (date.getMonth() - 0 + 1) + '-' + date.getDate() + ' 00:00:00');
+
         return {
             breadcrumbs: [{
                 title: '订单管理'
@@ -30,7 +33,7 @@ export default {
                 loading: false,
                 pageNum: 1,
                 pageSize: 10,
-                date: new Date(),
+                date: date,
                 statusMap: {
                     '0': '创建',
                     '1': '审核中',
