@@ -69,7 +69,8 @@ export default {
         },
         updateProduct (product) {
             return $.get(api.product.update, product).then(() => {
-                this.product.current = product;
+                let index = this.product.list.indexOf(this.product.current);
+                this.product.list.$set(index, product);
 
                 this.modal.edit = false;
                 Toastr.success('编辑成功', 'Success');
