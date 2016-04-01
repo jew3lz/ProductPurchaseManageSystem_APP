@@ -16,6 +16,16 @@ export default {
     components: { Breadcrumb, Bar, DataTable, Modal, Edit },
     directives: { loading },
     name: 'Product',
+    route: {
+        activate (transition) {
+            if (!window.userName) {
+                transition.redirect('/');
+                return;
+            }
+
+            transition.next();
+        }
+    },
     data () {
         return {
             breadcrumbs: [{

@@ -62,7 +62,7 @@ module.exports = {
         proxy: {
             "/proPur/*": {
                 target: "http://localhost:8899"
-                /*target: "http://172.17.203.11:8899"*/
+                /*target: "http://172.17.124.19:8899"*/
             }
         }
     },
@@ -78,11 +78,11 @@ if (process.env.NODE_ENV === 'production') {
                 NODE_ENV: '"production"'
             }
         }),
-        /*new webpack.optimize.UglifyJsPlugin({
+        new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
             }
-        }),*/
+        }),
         new webpack.optimize.OccurenceOrderPlugin()
     ])
 }

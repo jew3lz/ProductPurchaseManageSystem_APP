@@ -4,14 +4,29 @@ import Sidebar from './Sidebar.vue';
 import FooterLayout from './Footer.vue';
 
 export default {
-    components: { HeaderLayout, Sidebar, FooterLayout }
+    components: { HeaderLayout, Sidebar, FooterLayout },
+    data () {
+        return {
+            userName: null
+        };
+    },
+    events: {
+        login (userName) {
+            this.userName = window.userName = userName;
+            this.$router.go({ name: 'Order' });
+        },
+        logout () {
+            this.userName = window.userName = null;
+            this.$router.go({ name: 'Home' });
+        }
+    }
 }
 </script>
 
 <template>
 <div>
     <!--Header-->
-    <header-layout></header-layout>
+    <header-layout :user-name="userName"></header-layout>
     <!--Container-->
     <div class="page-container">
         <!--Sidebar-->
