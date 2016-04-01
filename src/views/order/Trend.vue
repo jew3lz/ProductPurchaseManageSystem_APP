@@ -33,7 +33,7 @@ export default {
                 ],
                 series : [
                     {
-                        name:'商品链接数',
+                        name:'订单数量',
                         type:'line',
                         smooth:true,
                         itemStyle: {normal: {areaStyle: {type: 'default'}}},
@@ -56,7 +56,7 @@ export default {
             <div class="portlet-title">
                 <div class="caption">
                     <i class="icon-social-dribbble font-blue"></i>
-                    <span class="caption-subject font-blue bold">30天内订单趋势 ORDER TREND</span>
+                    <span class="caption-subject font-blue bold">30天内订单数量趋势 ORDER TREND</span>
                 </div>
             </div>
 
