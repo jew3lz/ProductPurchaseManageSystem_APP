@@ -72,7 +72,7 @@ export default {
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-3 control-label">* 使用者</label>
+                <label class="col-md-3 control-label">使用者</label>
                 <div class="col-md-9">
                     <input type="text" class="form-control" placeholder="Enter Usage" maxlength="25" v-model="product.usage">
                 </div>

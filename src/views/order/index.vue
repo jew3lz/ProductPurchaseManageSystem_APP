@@ -6,6 +6,7 @@ import Paginator from 'vue-component-paginator';
 import Modal from 'vue-bootstrap-modal';
 import Datepicker from 'vue-component-date';
 import Edit from './Edit';
+import Trend from './Trend';
 
 // directives
 import loading from 'vue-loading';
@@ -14,10 +15,13 @@ import loading from 'vue-loading';
 import api from 'common/api';
 
 export default {
-    components: { Breadcrumb, Paginator, DataTable, Datepicker, Modal, Edit },
+    components: { Breadcrumb, DataTable, Datepicker, Modal, Edit, Trend },
     directives: { loading },
     name: 'Order',
     data () {
+        let date = new Date();
+        date = new Date(date.getFullYear() + '-' + (date.getMonth() - 0 + 1) + '-' + date.getDate() + ' 00:00:00');
+
         return {
             breadcrumbs: [{
                 title: '订单管理'
@@ -25,12 +29,13 @@ export default {
 
             order: {
                 list: [],
+                months: [],
                 count: 1,
                 current: {},
                 loading: false,
                 pageNum: 1,
                 pageSize: 10,
-                date: new Date(),
+                date: date,
                 statusMap: {
                     '0': '创建',
                     '1': '审核中',
@@ -55,6 +60,7 @@ export default {
         }
     },
     created () {
+        this.fetchOrderMonthList();
         this.fetchProductList();
         this.fetchEmployeeList();
         this.fetchOrderList();
@@ -76,6 +82,8 @@ export default {
             this.fetchOrderList();
         },
         addOrder (order) {
+            order.modified = this.order.date.getTime();
+
             return $.get(api.order.insert, order).then(() => {
                 this.order.list.unshift(order);
                 this.order.count += 1;
@@ -83,6 +91,8 @@ export default {
 
                 this.modal.add = false;
                 Toastr.success('新增成功', 'Success');
+
+                this.fetchOrderMonthList();
             });
         },
         updateOrder (order) {
@@ -118,6 +128,17 @@ export default {
                 this.product.list = result.value;
                 this.product.count = result.value.length;
             });
+        },
+        fetchOrderMonthList () {
+            let date = new Date();
+
+            let params = {
+                end: new Date(date.getFullYear() + '-' + (date.getMonth() - 0 + 1) + '-' + date.getDate() + ' 00:00:00').getTime()
+            };
+
+            return $.get(api.order.listMonth, params).then((result) => {
+                this.order.months = result.value;
+            });
         }
     }
 }
@@ -131,6 +152,8 @@ export default {
     <h3 class="page-title">
         订单管理 <small>Order Manage</small>
     </h3>
+
+    <trend :data="order.months" :loading="false"></trend>
 
     <div class="row">
         <div class="col-md-12">
