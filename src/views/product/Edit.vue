@@ -16,10 +16,12 @@ export default {
                     usage: '',
                     orderId: Math.floor(Math.random() * 90000) + 1
                 };
-            },
-            coerce (value) {
-                return Vue.plain(value);
             }
+        }
+    },
+    created () {
+        if (this.edit) {
+            this.product = Vue.plain(this.product);
         }
     },
     methods: {

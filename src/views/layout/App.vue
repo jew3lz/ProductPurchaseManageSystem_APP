@@ -10,13 +10,18 @@ export default {
             userName: null
         };
     },
+    created () {
+        this.userName = window.userName;
+    },
     events: {
         login (userName) {
             this.userName = window.userName = userName;
+            window.sessionStorage.setItem('userName', this.userName);
             this.$router.go({ name: 'Order' });
         },
         logout () {
             this.userName = window.userName = null;
+            window.sessionStorage.removeItem('userName');
             this.$router.go({ name: 'Home' });
         }
     }

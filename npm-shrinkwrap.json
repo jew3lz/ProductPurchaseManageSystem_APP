@@ -127,9 +127,9 @@
       "resolved": "https://registry.npm.taobao.org/toastr/download/toastr-2.1.2.tgz"
     },
     "vue": {
-      "version": "1.0.20",
-      "from": "vue@>=1.0.0 <2.0.0",
-      "resolved": "https://registry.npm.taobao.org/vue/download/vue-1.0.20.tgz",
+      "version": "1.0.17",
+      "from": "vue@1.0.17",
+      "resolved": "https://registry.npm.taobao.org/vue/download/vue-1.0.17.tgz",
       "dependencies": {
         "envify": {
           "version": "3.4.0",
