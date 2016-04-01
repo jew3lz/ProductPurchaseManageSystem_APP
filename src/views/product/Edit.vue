@@ -14,7 +14,7 @@ export default {
                     count: 0,
                     price: 0,
                     usage: '',
-                    orderId: 1
+                    orderId: Math.floor(Math.random() * 90000) + 1
                 };
             },
             coerce (value) {
@@ -37,7 +37,7 @@ export default {
             this.$emit('ok', product);
         },
         check () {
-            if (!this.product.name || this.product.count == null || this.product.price == null || this.product.usage == null || this.product.orderId == null) {
+            if (!this.product.name || this.product.count == null || this.product.price == null || !this.product.usage || this.product.orderId == null) {
                 Toastr.error('Error', '所有字段都不能为空');
                 return false;
             }
@@ -72,7 +72,7 @@ export default {
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-3 control-label">用途</label>
+                <label class="col-md-3 control-label">* 用途</label>
                 <div class="col-md-9">
                     <input type="text" class="form-control" placeholder="Enter Usage" maxlength="25" v-model="product.usage">
                 </div>
