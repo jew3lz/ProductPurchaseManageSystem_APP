@@ -17,6 +17,7 @@ module.exports = {
             components: path.join(__dirname, './src/components'),
             common: path.join(__dirname, './src/common'),
             views: path.join(__dirname, './src/views'),
+            mixins: path.join(__dirname, './src/mixins'),
             static: path.join(__dirname, './static')
         }
     },
@@ -60,8 +61,8 @@ module.exports = {
         noInfo: true,
         proxy: {
             "/proPur/*": {
-                target: "http://localhost:8899/*"
-                /*target: "http://172.17.203.67:8899"*/
+                /*target: "http://localhost:8899",*/
+                target: "http://172.17.203.11:8899"
             }
         }
     },

@@ -2,9 +2,9 @@
 // components
 import Breadcrumb from 'components/Breadcrumb';
 import DataTable from 'vue-bootstrap-table';
-import Paginator from 'vue-component-paginator';
 import Modal from 'vue-bootstrap-modal';
 import Edit from './Edit';
+import Bar from './Bar';
 
 // directives
 import loading from 'vue-loading';
@@ -13,7 +13,7 @@ import loading from 'vue-loading';
 import api from 'common/api';
 
 export default {
-    components: { Breadcrumb, Paginator, DataTable, Modal, Edit },
+    components: { Breadcrumb, Bar, DataTable, Modal, Edit },
     directives: { loading },
     name: 'Product',
     data () {
@@ -108,6 +108,8 @@ export default {
     <h3 class="page-title">
         产品管理 <small>Product Manage</small>
     </h3>
+
+    <bar :data="product.list" :loading="loading"></bar>
 
     <div class="row">
         <div class="col-md-12">
