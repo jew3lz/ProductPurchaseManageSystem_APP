@@ -1,13 +1,29 @@
 <script>
+import api from 'common/api';
+
 export default {
     data () {
         return {
-            pwd: ''
+            name: '',
+            pwd: '',
+            error: ''
         }
     },
     methods: {
         ok () {
-            this.$router.go({ name: 'Order' });
+            let params = {
+                userName: this.name,
+                userPassword: this.pwd
+            };
+
+            return $.get(api.user.query, params).then((result) => {
+                if (result.value === 'ok') {
+                    this.$dispatch('login', this.name);
+                }
+                else {
+                    this.error = '* 用户名或密码错误';
+                }
+            })
         }
     }
 };
@@ -21,9 +37,12 @@ export default {
                 <div class="lock-body">
                     <div class="lock-avatar-block">
                     <div class="lock-form">
-                        <h4>Admin</h4>
+                        <h4>{{error}}</h4>
                         <div class="form-group">
-                            <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" v-model="pwd">
+                            <input class="form-control placeholder-no-fix" type="text" placeholder="UserName" v-model="name">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" v-model="pwd">
                         </div>
                         <div class="form-actions">
                             <button class="btn green uppercase" @click="ok">Login</button>
@@ -52,7 +71,7 @@ export default {
     }
 
     .page-lock {
-        margin: 90px auto 30px;
+        margin: 50px auto 30px;
         width: 450px
     }
 
@@ -105,7 +124,7 @@ export default {
     .lock-form h4 {
         margin-top: 0;
         color: #dbe2ea;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 400
     }
 

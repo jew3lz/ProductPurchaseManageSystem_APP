@@ -1,0 +1,217 @@
+{
+  "name": "product-purchase",
+  "dependencies": {
+    "bootstrap": {
+      "version": "3.3.6",
+      "from": "bootstrap@>=3.3.6 <4.0.0",
+      "resolved": "https://registry.npm.taobao.org/bootstrap/download/bootstrap-3.3.6.tgz"
+    },
+    "bootstrap-daterangepicker": {
+      "version": "2.1.19",
+      "from": "bootstrap-daterangepicker@>=2.1.19 <3.0.0",
+      "resolved": "https://registry.npm.taobao.org/bootstrap-daterangepicker/download/bootstrap-daterangepicker-2.1.19.tgz"
+    },
+    "bootstrap-hover-dropdown": {
+      "version": "2.2.1",
+      "from": "bootstrap-hover-dropdown@>=2.2.1 <3.0.0",
+      "resolved": "https://registry.npm.taobao.org/bootstrap-hover-dropdown/download/bootstrap-hover-dropdown-2.2.1.tgz",
+      "dependencies": {
+        "streamqueue": {
+          "version": "0.1.3",
+          "from": "streamqueue@>=0.1.1 <0.2.0",
+          "resolved": "https://registry.npm.taobao.org/streamqueue/download/streamqueue-0.1.3.tgz",
+          "dependencies": {
+            "readable-stream": {
+              "version": "1.0.33",
+              "from": "readable-stream@>=1.0.33 <1.1.0",
+              "resolved": "https://registry.npm.taobao.org/readable-stream/download/readable-stream-1.0.33.tgz",
+              "dependencies": {
+                "core-util-is": {
+                  "version": "1.0.2",
+                  "from": "core-util-is@>=1.0.0 <1.1.0",
+                  "resolved": "https://registry.npm.taobao.org/core-util-is/download/core-util-is-1.0.2.tgz"
+                },
+                "isarray": {
+                  "version": "0.0.1",
+                  "from": "isarray@0.0.1",
+                  "resolved": "https://registry.npm.taobao.org/isarray/download/isarray-0.0.1.tgz"
+                },
+                "string_decoder": {
+                  "version": "0.10.31",
+                  "from": "string_decoder@>=0.10.0 <0.11.0",
+                  "resolved": "https://registry.npm.taobao.org/string_decoder/download/string_decoder-0.10.31.tgz"
+                },
+                "inherits": {
+                  "version": "2.0.1",
+                  "from": "inherits@>=2.0.1 <2.1.0",
+                  "resolved": "https://registry.npm.taobao.org/inherits/download/inherits-2.0.1.tgz"
+                }
+              }
+            },
+            "isstream": {
+              "version": "0.1.2",
+              "from": "isstream@>=0.1.1 <0.2.0",
+              "resolved": "https://registry.npm.taobao.org/isstream/download/isstream-0.1.2.tgz"
+            }
+          }
+        }
+      }
+    },
+    "bootstrap-switch": {
+      "version": "3.3.2",
+      "from": "bootstrap-switch@>=3.3.2 <4.0.0",
+      "resolved": "https://registry.npm.taobao.org/bootstrap-switch/download/bootstrap-switch-3.3.2.tgz"
+    },
+    "font-awesome": {
+      "version": "4.5.0",
+      "from": "font-awesome@>=4.5.0 <5.0.0",
+      "resolved": "https://registry.npm.taobao.org/font-awesome/download/font-awesome-4.5.0.tgz"
+    },
+    "jquery": {
+      "version": "2.2.2",
+      "from": "jquery@>=2.2.1 <3.0.0",
+      "resolved": "https://registry.npm.taobao.org/jquery/download/jquery-2.2.2.tgz"
+    },
+    "jquery-slimscroll": {
+      "version": "1.3.6",
+      "from": "jquery-slimscroll@>=1.3.6 <2.0.0",
+      "resolved": "https://registry.npm.taobao.org/jquery-slimscroll/download/jquery-slimscroll-1.3.6.tgz"
+    },
+    "jquery-ui": {
+      "version": "1.10.5",
+      "from": "jquery-ui@>=1.10.5 <2.0.0",
+      "resolved": "https://registry.npm.taobao.org/jquery-ui/download/jquery-ui-1.10.5.tgz"
+    },
+    "jquery-uniform": {
+      "version": "1.7.5",
+      "from": "jquery-uniform@>=1.7.5 <2.0.0",
+      "resolved": "https://registry.npm.taobao.org/jquery-uniform/download/jquery-uniform-1.7.5.tgz",
+      "dependencies": {
+        "jquery-browserify": {
+          "version": "1.8.1",
+          "from": "jquery-browserify@>=1.8.1 <1.9.0",
+          "resolved": "https://registry.npm.taobao.org/jquery-browserify/download/jquery-browserify-1.8.1.tgz"
+        }
+      }
+    },
+    "moment": {
+      "version": "2.12.0",
+      "from": "moment@>=2.12.0 <3.0.0",
+      "resolved": "https://registry.npm.taobao.org/moment/download/moment-2.12.0.tgz"
+    },
+    "select2": {
+      "version": "4.0.2",
+      "from": "select2@>=4.0.1 <5.0.0",
+      "resolved": "https://registry.npm.taobao.org/select2/download/select2-4.0.2.tgz",
+      "dependencies": {
+        "almond": {
+          "version": "0.3.1",
+          "from": "almond@>=0.3.1 <0.4.0",
+          "resolved": "https://registry.npm.taobao.org/almond/download/almond-0.3.1.tgz"
+        },
+        "jquery-mousewheel": {
+          "version": "3.1.13",
+          "from": "jquery-mousewheel@>=3.1.13 <3.2.0",
+          "resolved": "https://registry.npm.taobao.org/jquery-mousewheel/download/jquery-mousewheel-3.1.13.tgz"
+        }
+      }
+    },
+    "simple-line-icons": {
+      "version": "2.2.4",
+      "from": "simple-line-icons@>=2.2.4 <3.0.0",
+      "resolved": "https://registry.npm.taobao.org/simple-line-icons/download/simple-line-icons-2.2.4.tgz"
+    },
+    "toastr": {
+      "version": "2.1.2",
+      "from": "toastr@>=2.1.2 <3.0.0",
+      "resolved": "https://registry.npm.taobao.org/toastr/download/toastr-2.1.2.tgz"
+    },
+    "vue": {
+      "version": "1.0.20",
+      "from": "vue@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npm.taobao.org/vue/download/vue-1.0.20.tgz",
+      "dependencies": {
+        "envify": {
+          "version": "3.4.0",
+          "from": "envify@>=3.4.0 <4.0.0",
+          "resolved": "https://registry.npm.taobao.org/envify/download/envify-3.4.0.tgz",
+          "dependencies": {
+            "through": {
+              "version": "2.3.8",
+              "from": "through@>=2.3.4 <2.4.0",
+              "resolved": "https://registry.npm.taobao.org/through/download/through-2.3.8.tgz"
+            },
+            "jstransform": {
+              "version": "10.1.0",
+              "from": "jstransform@>=10.0.1 <11.0.0",
+              "resolved": "https://registry.npm.taobao.org/jstransform/download/jstransform-10.1.0.tgz",
+              "dependencies": {
+                "base62": {
+                  "version": "0.1.1",
+                  "from": "base62@0.1.1",
+                  "resolved": "https://registry.npm.taobao.org/base62/download/base62-0.1.1.tgz"
+                },
+                "esprima-fb": {
+                  "version": "13001.1001.0-dev-harmony-fb",
+                  "from": "esprima-fb@13001.1001.0-dev-harmony-fb",
+                  "resolved": "https://registry.npm.taobao.org/esprima-fb/download/esprima-fb-13001.1001.0-dev-harmony-fb.tgz"
+                },
+                "source-map": {
+                  "version": "0.1.31",
+                  "from": "source-map@0.1.31",
+                  "resolved": "https://registry.npm.taobao.org/source-map/download/source-map-0.1.31.tgz",
+                  "dependencies": {
+                    "amdefine": {
+                      "version": "1.0.0",
+                      "from": "amdefine@>=0.0.4",
+                      "resolved": "https://registry.npm.taobao.org/amdefine/download/amdefine-1.0.0.tgz"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "vue-bootstrap-modal": {
+      "version": "0.1.8",
+      "from": "vue-bootstrap-modal@>=0.1.0 <0.2.0",
+      "resolved": "https://registry.npm.taobao.org/vue-bootstrap-modal/download/vue-bootstrap-modal-0.1.8.tgz"
+    },
+    "vue-bootstrap-table": {
+      "version": "0.1.2",
+      "from": "vue-bootstrap-table@>=0.1.0 <0.2.0",
+      "resolved": "https://registry.npm.taobao.org/vue-bootstrap-table/download/vue-bootstrap-table-0.1.2.tgz"
+    },
+    "vue-component-date": {
+      "version": "0.1.1",
+      "from": "vue-component-date@>=0.1.0 <0.2.0",
+      "resolved": "https://registry.npm.taobao.org/vue-component-date/download/vue-component-date-0.1.1.tgz"
+    },
+    "vue-component-paginator": {
+      "version": "0.1.0",
+      "from": "vue-component-paginator@>=0.1.0 <0.2.0",
+      "resolved": "https://registry.npm.taobao.org/vue-component-paginator/download/vue-component-paginator-0.1.0.tgz"
+    },
+    "vue-component-select": {
+      "version": "0.1.1",
+      "from": "vue-component-select@>=0.1.1 <0.2.0",
+      "resolved": "https://registry.npm.taobao.org/vue-component-select/download/vue-component-select-0.1.1.tgz"
+    },
+    "vue-loading": {
+      "version": "0.1.2",
+      "from": "vue-loading@>=0.1.0 <0.2.0"
+    },
+    "vue-plain": {
+      "version": "0.1.0",
+      "from": "vue-plain@*",
+      "resolved": "https://registry.npm.taobao.org/vue-plain/download/vue-plain-0.1.0.tgz"
+    },
+    "vue-router": {
+      "version": "0.7.11",
+      "from": "vue-router@>=0.7.11 <0.8.0",
+      "resolved": "https://registry.npm.taobao.org/vue-router/download/vue-router-0.7.11.tgz"
+    }
+  }
+}

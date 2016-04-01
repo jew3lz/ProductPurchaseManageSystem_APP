@@ -2,7 +2,6 @@
 // components
 import Breadcrumb from 'components/Breadcrumb';
 import DataTable from 'vue-bootstrap-table';
-import Paginator from 'vue-component-paginator';
 import Modal from 'vue-bootstrap-modal';
 import Datepicker from 'vue-component-date';
 import Edit from './Edit';
@@ -18,6 +17,16 @@ export default {
     components: { Breadcrumb, DataTable, Datepicker, Modal, Edit, Trend },
     directives: { loading },
     name: 'Order',
+    route: {
+        activate (transition) {
+            if (!window.userName) {
+                transition.redirect('/');
+                return;
+            }
+
+            transition.next();
+        }
+    },
     data () {
         let date = new Date();
         date = new Date(date.getFullYear() + '-' + (date.getMonth() - 0 + 1) + '-' + date.getDate() + ' 00:00:00');

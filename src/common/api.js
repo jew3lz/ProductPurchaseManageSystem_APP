@@ -13,5 +13,8 @@ export default {
     },
     employee: {
         list: 'proPur/order/listEmployee'
+    },
+    user: {
+        query: '/proPur/user/queryUser'
     }
 };
