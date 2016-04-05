@@ -17,5 +17,7 @@ Vue.config.debug = true;
 Vue.use(Router);
 Vue.use(plain);
 
+window.userName = window.sessionStorage.getItem('userName');
+
 let router = initRouter(Router);
 router.start(App, '#app');
